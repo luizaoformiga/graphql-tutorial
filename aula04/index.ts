@@ -3,12 +3,13 @@ import { gql, ApolloServer } from 'apollo-server';
 const typeDefs = gql`
   type Query {
     age: Int;
-    purchase: Float;
+    pushcase: Float;
     name: String;
     active: Boolean;
-    id: ID
+    id: ID;
+    technology: [String]!
   }
-`;
+`
 
 const resolvers = {
   Query: {
@@ -26,6 +27,9 @@ const resolvers = {
     },
     id() {
       return 2365135123;
+    },
+    technology() {
+      return ["Age", "phone", "number", "address"] // or []
     } 
   }    
 }

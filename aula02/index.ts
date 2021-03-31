@@ -9,14 +9,14 @@ const typeDefs = gql`
 const resolvers = {
   Query: {
     hello() {
-        return "hello World"
+      return "hello World"
     }
   }
 }
 
 const server = new ApolloServer({ 
-    typeDefs, 
-    resolvers
+  typeDefs, 
+  resolvers
 })
 
 server.listen();

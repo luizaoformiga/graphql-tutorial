@@ -5,7 +5,7 @@
   "author": "Luiz Lima",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon ts-node"
+    "start": "npx ts-node-dev"
   },
   "dependencies": {
     "graphql": "15.5.0",

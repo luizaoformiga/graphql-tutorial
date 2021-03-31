@@ -49,4 +49,4 @@ const resolvers = {
 }
 ```
 
-No caso do ID, Ele vai retornar uma sting com todos os valores dentro, mesmo que nós ali no exemplo digitamos no formato Int.
+No caso do ID, Ele vai retornar uma ```string``` com todos os valores dentro, mesmo que nós ali no exemplo digitamos no formato ```Int```.
