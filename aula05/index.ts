@@ -1,17 +1,5 @@
 import { gql, ApolloServer } from 'apollo-server';
 
-const products = [
-    {   
-      id: 1,
-      name: "Notebook",
-      value: 1200.00
-    },
-    {   
-        id: 2,
-        name: "camiseta",
-        value: 10.00
-    }
-]
 
 const users = [
   {
@@ -24,20 +12,33 @@ const users = [
   } 
 ]
 
-const typeDefs = gql`
-  type Product {
-    id: ID;
-    name: String;
-    value: Float;
+const products = [
+  {   
+    id: 1,
+    name: "Notebook",
+    value: 1200.00
+  },
+  {   
+    id: 2,
+    name: "camiseta",
+    value: 10.00
   }
+]
 
+const typeDefs = gql` 
   type User {
     id: ID;
     age: Int;
     pushcase: Float;
     name: String;
     active: Boolean;
-    technology: [String]!;
+    technology: [String!]!;
+  }
+
+  type Product {
+    id: ID;
+    name: String;
+    value: Float;
   }
   
   type Query {
@@ -52,7 +53,7 @@ const resolvers = {
       return users;
     },
     product() {
-        return products;
+      return products;
     }
   }    
 }
